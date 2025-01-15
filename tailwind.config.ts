@@ -22,6 +22,8 @@ export default {
         ovo: ['Ovo', 'sans-serif'],
       },
       colors: {
+        french: '#C3C7D5',
+        davy: '#565656',
         eerie: {
           100: '#d3d3d4',
           200: '#a6a8a9',

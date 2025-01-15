@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ovo&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import '~react-toastify/dist/ReactToastify.css';
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -15,23 +19,23 @@ body {
 }
 
 h1 {
-  @apply font-ovo lg:text-5xl;
+  @apply font-ovo text-5xl md:text-6xl;
 }
 h2 {
-  @apply font-ovo lg:text-4xl;
+  @apply font-ovo text-4xl md:text-5xl;
 }
 h3 {
-  @apply font-ovo lg:text-3xl;
+  @apply font-ovo text-2xl md:text-4xl;
 }
 h4 {
-  @apply font-ovo lg:text-2xl;
+  @apply font-ovo text-2xl md:text-3xl;
 }
 h5 {
-  @apply font-ovo lg:text-xl;
+  @apply font-ovo text-xl md:text-2xl;
 }
 h6 {
-  @apply font-ovo lg:text-lg;
+  @apply font-ovo text-lg md:text-xl text-davy dark:text-french;
 }
 p {
-  @apply font-ovo;
+  @apply font-ovo text-davy dark:text-french;
 }

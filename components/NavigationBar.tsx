@@ -5,28 +5,33 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   navigationMenuTriggerStyle,
-} from './navigation-menu';
+} from './ui/navigation-menu';
 import { Navlinks } from '@/data';
 import Link from 'next/link';
-import { DarkModeButton } from './DarkModeButton';
-import { Button } from './button';
 import { MoveUpRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { DarkModeButton } from './DarkModeButton';
+import { Button } from './ui/button';
 
 const NavigationBar = () => {
   return (
-    <div className="flex items-center justify-between p-4">
+    <div className="fixed z-[50] w-full flex items-center justify-between p-4">
       <div>
         <h1 className="font-outfit font-semibold text-5xl">
           Izaac<span className="text-tangello-500">.</span>
         </h1>
       </div>
-      <div className="bg-white dark:bg-eerie-500 border border-gray-100 dark:border-eerie-400 drop-shadow-md h-14 flex items-center px-2 rounded-full">
+      <div className="bg-white dark:bg-eerie-500 border border-gray-100 dark:border-eerie-400 drop-shadow-md h-14 lg:flex items-center px-2 rounded-full hidden">
         <NavigationMenu>
           <NavigationMenuList>
             {Navlinks.map((navlink, index) => (
               <NavigationMenuItem key={index}>
-                <Link href={navlink.href} legacyBehavior passHref>
+                <Link
+                  href={navlink.href}
+                  legacyBehavior
+                  passHref
+                  scroll={false}
+                >
                   <NavigationMenuLink
                     className={cn(
                       navigationMenuTriggerStyle(),
